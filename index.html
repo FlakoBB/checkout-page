@@ -59,7 +59,12 @@
             <label for="country">Contry</label>
             <div class="input_outline">
               <i class="input_icon fa-solid fa-earth-americas"></i>
-              <input id="country" type="text" placeholder="Your country">
+              <select name="country" id="country">
+                <option value="Mexico">Mexico</option>
+                <option value="Spain">Spain</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Germany">Germany</option>
+              </select>
             </div>
           </div>
           <div class="input_group">
@@ -71,7 +76,7 @@
           </div>
         </div>
       </section>
-      <label for="saveInformation">
+      <label class="check_option" for="saveInformation">
         <input type="checkbox" id="saveInformation">
         Save this information for the next time
       </label>
