@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="shortcut icon" href="./images/Icono_FLK_Azul.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://kit.fontawesome.com/b082e0647c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+  <main>
+    <form>
+      <section class="contact_information">
+        <h3>Contact Information</h3>
+        <div class="input_group">
+          <label for="email">E-mail</label>
+          <div class="input_outline">
+            <i class="input_icon fa-solid fa-envelope"></i>
+            <input id="email" type="email" placeholder="Enter your email">
+          </div>
+        </div>
+        <div class="input_group">
+          <label for="phone">Phone</label>
+          <div class="input_outline">
+            <i class="input_icon fa-solid fa-phone"></i>
+            <input id="phone" type="tel" placeholder="Enter your phone">
+          </div>
+        </div>
+      </section>
+      <section class="shipping_address">
+        <h3>Shipping address</h3>
+        <div class="input_group">
+          <label for="fullName">Full name</label>
+          <div class="input_outline">
+            <i class="input_icon fa-solid fa-user"></i>
+            <input id="fullName" type="text" placeholder="Your full name">
+          </div>
+        </div>
+        <div class="input_group">
+          <label for="address">Address</label>
+          <div class="input_outline">
+            <i class="input_icon fa-solid fa-house"></i>
+            <input id="address" type="text" placeholder="Your address">
+          </div>
+        </div>
+        <div class="input_group">
+          <label for="city">City</label>
+          <div class="input_outline">
+            <i class="input_icon fa-solid fa-city"></i>
+            <input id="city" type="text" placeholder="Your city">
+          </div>
+        </div>
+        <div class="double_input">
+          <div class="input_group">
+            <label for="country">Contry</label>
+            <div class="input_outline">
+              <i class="input_icon fa-solid fa-earth-americas"></i>
+              <input id="country" type="text" placeholder="Your country">
+            </div>
+          </div>
+          <div class="input_group">
+            <label for="postalCode">Postal code</label>
+            <div class="input_outline">
+              <i class="input_icon fa-solid fa-inbox"></i>
+              <input id="postalCode" type="text" placeholder="Your postal code">
+            </div>
+          </div>
+        </div>
+      </section>
+      <label for="saveInformation">
+        <input type="checkbox" id="saveInformation">
+        Save this information for the next time
+      </label>
+      <button type="submit">Continue</button>
+    </form>
+    <aside>
+      <section class="products">
+        <article class="product_selected">
+          <figure>
+            <img src="" alt="Product 1">
+          </figure>
+          <div class="product_info">
+            <h5>Vintage Backbag</h5>
+            <p>$59.99 <span>$94.99</span></p>
+            <div class="amount">
+              - 1 +
+              <!-- ToDo: hacer un contador que pueda manupular el usuario -->
+            </div>
+          </div>
+        </article>
+        <article class="product_selected">
+          <figure>
+            <img src="" alt="Product 2">
+          </figure>
+          <div class="product_info">
+            <h5>Levi Shoes</h5>
+            <p>$74.99 <span>$124.99</span></p>
+            <div class="amount">
+              - 1 +
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="total_prices">
+        <div class="price">
+          <spam class="title">Shipping</spam>
+          <spam class="total">$19</spam>
+        </div>
+        <div class="price">
+          <spam class="title">Total</spam>
+          <spam class="total">$148.98</spam>
+        </div>
+      </section>
+    </aside>
+  </main>
+  <footer>
+    <p>Created by <a href="https://bit.ly/follow-flako">FlakoBB</a> - devChallenges.io</p>
+  </footer>
+</body>
+</html>
