@@ -14,14 +14,14 @@
       <h1>Checkout</h1>
     </header>
     <main>
-      <form>
+      <form id="main_form">
         <section class="contact_information">
           <h3>Contact Information</h3>
           <div class="input_group">
             <label for="email">E-mail</label>
             <div class="input_outline">
               <i class="input_icon fa-solid fa-envelope"></i>
-              <input id="email" type="email" placeholder="Enter your email">
+              <input id="email" type="email" placeholder="Enter your email" required>
             </div>
           </div>
           <div class="input_group">
@@ -38,21 +38,21 @@
             <label for="fullName">Full name</label>
             <div class="input_outline">
               <i class="input_icon fa-solid fa-user"></i>
-              <input id="fullName" type="text" placeholder="Your full name">
+              <input id="fullName" type="text" placeholder="Your full name" required>
             </div>
           </div>
           <div class="input_group">
             <label for="address">Address</label>
             <div class="input_outline">
               <i class="input_icon fa-solid fa-house"></i>
-              <input id="address" type="text" placeholder="Your address">
+              <input id="address" type="text" placeholder="Your address" required>
             </div>
           </div>
           <div class="input_group">
             <label for="city">City</label>
             <div class="input_outline">
               <i class="input_icon fa-solid fa-city"></i>
-              <input id="city" type="text" placeholder="Your city">
+              <input id="city" type="text" placeholder="Your city" required>
             </div>
           </div>
           <div class="double_input">
@@ -72,7 +72,7 @@
               <label for="postalCode">Postal code</label>
               <div class="input_outline">
                 <i class="input_icon fa-solid fa-inbox"></i>
-                <input id="postalCode" type="text" placeholder="Your postal code">
+                <input id="postalCode" type="text" placeholder="Your postal code" required>
               </div>
             </div>
           </div>
@@ -93,10 +93,9 @@
               <h5>Vintage Backbag</h5>
               <p>$59.99 <span>$94.99</span></p>
               <div class="amount">
-                <button type="button"><i class="fa-solid fa-minus"></i></button>
-                <span>1</span>
-                <button type="button"><i class="fa-solid fa-plus"></i></button>
-                <!-- ToDo: hacer un contador que pueda manupular el usuario -->
+                <button id="btn_minus1" type="button"><i class="fa-solid fa-minus"></i></button>
+                <span id="count1">1</span>
+                <button id="btn_plus1" type="button"><i class="fa-solid fa-plus"></i></button>
               </div>
             </div>
           </article>
@@ -108,9 +107,9 @@
               <h5>Levi Shoes</h5>
               <p>$74.99 <span>$124.99</span></p>
               <div class="amount">
-                <button type="button"><i class="fa-solid fa-minus"></i></button>
-                <span>1</span>
-                <button type="button"><i class="fa-solid fa-plus"></i></button>
+                <button id="btn_minus2" type="button"><i class="fa-solid fa-minus"></i></button>
+                <span id="count2">1</span>
+                <button id="btn_plus2" type="button"><i class="fa-solid fa-plus"></i></button>
               </div>
             </div>
           </article>
@@ -132,4 +131,5 @@
     </footer>
   </div>
 </body>
+<script src="./javascript/main.js"></script>
 </html>

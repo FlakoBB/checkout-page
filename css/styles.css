@@ -38,10 +38,6 @@ body {
   padding: 2rem 2rem 1rem 2rem;
 }
 
-/* header {
-  border: 1px solid red;
-} */
-
 header h1 {
   font-size: 2.3rem;
   font-weight: 700;
@@ -49,7 +45,6 @@ header h1 {
 }
 
 main {
-  /* border: 1px solid green; */
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -109,9 +104,17 @@ form section h3 {
   color: var(--gray1);
 }
 
+.input_group .input_outline.invalid {
+  border-color: var(--red);
+}
+
+.input_group .input_outline.invalid .input_icon {
+  color: var(--red);
+}
+
 .double_input {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
@@ -277,7 +280,6 @@ main aside {
 }
 
 footer {
-  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -309,6 +311,10 @@ footer p a {
 
 
 @media (max-width: 767px) {
+  * {
+    font-size: 12px;
+  }
+
   main form,
   main aside {
     width: 100%;
