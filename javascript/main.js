@@ -41,18 +41,57 @@ btnPlus2.addEventListener('click', () => {
 
 const mainForm = document.getElementById('main_form')
 const inputs = document.querySelectorAll('input')
+const select = document.querySelector('select')
 
-console.log(inputs)
 
 mainForm.addEventListener('submit', (event) => {
   event.preventDefault()
-  console.log('on sumbit we')
+  let errorCounter = 0
   inputs.forEach(input => {
-    console.log(input)
+    const outline = input.parentNode
     if (!input.checkValidity()) {
-      console.log('input invalid we')
-      const outline = input.parentNode
       outline.classList.add('invalid')
+      errorCounter = errorCounter + 1
+    } else {
+      outline.classList.remove('invalid')
     }
+  })
+  if (!select.checkValidity()) {
+    const outline = select.parentNode
+    outline.classList.add('invalid')
+    errorCounter = errorCounter + 1
+  } else {
+    const outline = select.parentNode
+    outline.classList.remove('invalid')
+  }
+
+  if (errorCounter > 0) {
+    showErrorToast()
+  } else {
+    showSuccessToast()
+  }
+})
+
+const errorToast = document.querySelector('.error_toast')
+const showErrorToast = () => {
+  errorToast.classList.add('show_toast')
+  setTimeout(() => {
+    errorToast.classList.remove('show_toast')
+  }, 5000)
+}
+
+const successToast = document.querySelector('.success_toast')
+const showSuccessToast = () => {
+  successToast.classList.add('show_toast')
+  setTimeout(() => {
+    successToast.classList.remove('show_toast')
+  }, 5000)
+}
+
+const btnsCloseToast = document.querySelectorAll('.btn_close_toast')
+btnsCloseToast.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const toast = btn.parentNode
+    toast.classList.remove('show_toast')
   })
 })

@@ -14,7 +14,7 @@
       <h1>Checkout</h1>
     </header>
     <main>
-      <form id="main_form">
+      <form id="main_form" novalidate>
         <section class="contact_information">
           <h3>Contact Information</h3>
           <div class="input_group">
@@ -28,7 +28,7 @@
             <label for="phone">Phone</label>
             <div class="input_outline">
               <i class="input_icon fa-solid fa-phone"></i>
-              <input id="phone" type="tel" placeholder="Enter your phone">
+              <input id="phone" type="tel" placeholder="Enter your phone" required>
             </div>
           </div>
         </section>
@@ -60,7 +60,8 @@
               <label for="country">Contry</label>
               <div class="input_outline">
                 <i class="input_icon fa-solid fa-earth-americas"></i>
-                <select name="country" id="country">
+                <select name="country" id="country" required>
+                  <option value="" disabled selected>Your Contry</option>
                   <option value="Mexico">Mexico</option>
                   <option value="Spain">Spain</option>
                   <option value="Argentina">Argentina</option>
@@ -129,6 +130,16 @@
     <footer>
       <p>Created by <a href="https://bit.ly/follow-flako">FlakoBB</a> - devChallenges.io</p>
     </footer>
+    <!-- ? Alerts -->
+    <!-- * Toast -->
+    <div class="toast error_toast">
+      <p>You must complete all the fields!</p>
+      <button class="btn_close_toast"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="toast success_toast">
+      <p>The data has been sent successfully!</p>
+      <button class="btn_close_toast"><i class="fa-solid fa-xmark"></i></button>
+    </div>
   </div>
 </body>
 <script src="./javascript/main.js"></script>
